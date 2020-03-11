@@ -1,0 +1,125 @@
+h1{
+    color:blueviolet;
+    font-size: 50px;
+    text-align: center;
+}
+
+/*******YO************/
+
+#yo{
+    text-align: center;
+    background: url(fondo3.png);
+    width: 1200px;
+}
+#yo>hr{
+    width: 100px;
+}
+#yo>h2{
+    color: rgb(147, 86, 204);
+}
+#yo>p{
+    font-family: cursive;
+    font-size: medium;
+}
+#yo>ul>li{
+    list-style: none;
+    margin: 15px;
+}
+/********FIN YO**********/
+/********MIS MIGOS*******/
+div#amigos{
+    text-align: center;
+    border: double;
+    margin: 100px;
+    border-color: rgb(248, 137, 17);
+    background: blanchedalmond;
+}
+#amigos>dl{
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(227, 66%, 61%);
+    text-align: left;
+    padding: 50px;
+}
+#amigos>dl>dt{
+    color: brown;
+}
+/******FIN AMIGOS*********/
+/*******FAMILIA***********/
+#familia{
+    position: relative;
+    left: 30%;
+}
+#familia>img{
+    position: relative;
+    left: 10%;
+}
+td{
+    border:double;
+    padding: 10px;
+}
+td:hover{
+    background: #98bfdc;
+}
+#familia>h2{
+    color: #98bfdc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.pa{
+    background: #daa4dc;
+}
+.her{
+    background: #a5ddce;
+}
+.sob{
+    background: #b8e1b6;
+}
+/********PASTIEMPOS*********/
+.tab{
+    position: relative;
+    left:37%;
+}
+.hor1{
+    background: #e6c6e7;
+}
+.hor2>td>p{
+    background: rgb(250, 255, 152);
+}
+.hor2>td{
+    background: #fdc29b;
+}
+.hor3>td>p{
+    background: rgb(192, 247, 197);
+}
+.hor3>td{
+    background: #7af352;
+}
+.hor4>td>p{
+    background: rgb(209, 250, 255);
+}
+.hor4>td{
+    background: #7edcfc;
+}
+.hor5>td>p{
+    background: rgb(240, 174, 174);
+}
+.hor5>td{
+    background: #f57b7b;
+}
+.hor6>td>p{
+    background: rgb(194, 188, 241);
+}
+.hor6>td{
+    background: #87a9ee;
+}
+.hor7>td>p{
+    background: rgb(241, 170, 170);
+}
+.hor7>td{
+    background: #f08a86;
+}
+.hor8>td>p{
+    background: rgb(255, 152, 236);
+}
+.hor8>td{
+    background: #fa8ee3;
+}
