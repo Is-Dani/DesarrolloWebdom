@@ -1,0 +1,27 @@
+@keyframes colores{
+    from { transform: none; height: 600px; }
+    25%{ transform: scale(1);height: 600px;}
+     50% { transform: scale(1.03); height: 600px;}
+     
+     to { transform: none;height: 600px;}
+ 
+ }
+ 
+ .caja{
+ 
+     height: 700px;
+     background-size:cover;
+     animation-name:colores; 
+     animation-duration:10s; 
+     animation-iteration-count:infinite; 
+ 
+ }
+ @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+ .header {
+     background: linear-gradient(rgba(63, 191, 127, .1), rgba(63, 191, 127, .6)), url("https://www.elsevier.com/__data/assets/image/0007/978739/coronavirus-image-iStock-628925532-full-width-wide.jpg");
+     background-size: cover;
+     height: 100px;
+     color: #fff;
+     font-family: 'Lato', sans-serif;
+ }
