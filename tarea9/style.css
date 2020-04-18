@@ -1,0 +1,9 @@
+  .badge-success{
+    background: #32CD32 !important;
+  }
+  .badge-danger{
+      background: #FF6347 !important;
+  }
+  .table-striped>tbody>tr:nth-of-type(odd){
+      background-color: #b7bedd50;
+  }
