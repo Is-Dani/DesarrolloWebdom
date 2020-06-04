@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<!-- 2.	Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.-->
+<body>
+        <h3>El numero es Par o Impar?</h3>
+        <label for="numero"> introducir un numero</label>
+        <input type="text" id="numero" value="">
+        <input type="submit" onclick="parImpar()">
+        <h4>resultado</h4>
+    <div id="resultado">
+        <p>aqui</p>
+    </div>
+    <script>
+        function parImpar(){
+            num = parseInt(document.getElementById("numero").value);
+            if(num % 2 == 0){
+                document.getElementById('resultado').innerHTML = "el numero "+num+" es par";
+            }else{
+                document.getElementById('resultado').innerHTML = "el numero "+num+" es impar";
+            }
+        }
+    </script>
+</body>
+</html>

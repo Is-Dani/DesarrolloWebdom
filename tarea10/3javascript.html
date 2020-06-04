@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio</title>
+    <!-- 3.	Definir una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha. Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".-->
+</head>
+<body>
+    <h3>la palabra es un Palindromo?</h3>
+    <input type="text" id="frase" value="">
+    <input type="submit" onclick="palindromo()">
+    <h4>resultado</h4>
+    <div id="contenido">
+        <p>aqui</p>
+    </div>
+    
+    <script>
+        function palindromo(){
+            var frase = document.getElementById('frase').value;
+            //console.log(frase+"---la fase natural");
+            frase = frase.toLowerCase().replace(/\s/g,"");
+            //console.log(frase+"----sin esacios");
+
+            reversoFrase = frase.split("").reverse().toString();
+            //console.log(reversoFrase+"----array.reverso.string");
+
+            for(i=0; i<reversoFrase.length; i++){
+                reversoFrase = reversoFrase.replace(",","");
+            }
+            //console.log(reversoFrase+"---sin comas")
+
+            if(frase == reversoFrase){
+                document.getElementById('contenido').innerHTML = "la frase "+document.getElementById('frase').value+" es un palindromo";
+            }else{
+                document.getElementById('contenido').innerHTML = "la frase "+document.getElementById('frase').value+" no es un palindromo";
+            }
+        }
+        
+    </script>
+</body>
+</html>
