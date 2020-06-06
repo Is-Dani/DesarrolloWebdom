@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>personas crud</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <div class="container">
+                <header>
+                    <h1 class="text-center">Crud Personas</h1>
+                </header>
+                <section class="contenido-principal">
+                    <div class="row">
+                        <div class="col ">
+                            <div class="contenido primario">
+                                <a href="javascript:cargar('listar.php')" class="btn btn-primary " type="button">Listar</a>
+                                <a  href="#" onclick="cargar('agregar.html')" class="btn btn-primary">Agregar</a>
+                                <a  href="#" onclick="cargar('depart.php')" class="btn btn-primary">Departamento</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="contenido secundario" id="contenido">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <script>
+        function cargar(pagina) {
+          var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            ajax.open("get", pagina, true); //a quien llamara
+            ajax.onreadystatechange = function () { // funcion de respuesta
+               if (ajax.readyState == 4) {
+                    document.getElementById("contenido").innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+            ajax.send(); //llamar a la pagina
+        }
+
+        function llamarregistrar() {
+            
+            var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            
+            var parametros = "nombre=" + encodeURI(nombre) + "&apellido=" + encodeURI(apellido) + "&Nocache=" + Math.random();
+            //alert(direccion);
+            ajax.open("post", "agregar.php", true); //a quien llamara
+            ajax.onreadystatechange = function() { // funcion de respuesta
+                if (ajax.readyState == 4) {
+                    document.getElementById("contenido").innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //clave para que funcione cuando se envia por post 
+            ajax.send(parametros); //llamar a la pagina
+
+        }
+
+
+        function eliminar(id){
+            var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            
+            var parametros = "id=" + id + "&Nocache=" + Math.random();
+            //alert(direccion);
+            ajax.open("post", "eliminar.php", true); //a quien llamara
+            ajax.onreadystatechange = function() { // funcion de respuesta
+                if (ajax.readyState == 4) {
+                     document.getElementById("contenido").innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //clave para que funcione cuando se envia por post 
+            ajax.send(parametros); //llamar a la pagina
+        }
+
+        function editar(id){
+            var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            
+            var parametros = "id=" + id + "&Nocache=" + Math.random();
+            //alert(direccion);
+            ajax.open("post", "formeditar.php", true); //a quien llamara
+            ajax.onreadystatechange = function() { // funcion de respuesta
+                if (ajax.readyState == 4) {
+                     document.getElementById("contenido").innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //clave para que funcione cuando se envia por post 
+            ajax.send(parametros); //llamar a la pagina
+        }
+
+        function llamarEditar() {
+            
+            var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            const id = document.getElementById('id').value;
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+
+            var parametros = "nombre=" + encodeURI(nombre) + "&apellido=" + encodeURI(apellido) + "&id=" + encodeURI(id) + "&Nocache=" + Math.random();
+            //alert(direccion);
+            ajax.open("post", "editar.php", true); //a quien llamara
+            ajax.onreadystatechange = function() { // funcion de respuesta
+                if (ajax.readyState == 4) {
+                    
+                     document.getElementById("contenido").innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //clave para que funcione cuando se envia por post 
+            ajax.send(parametros); //llamar a la pagina
+
+        }
+        function selecDep(){
+
+            const selectId = document.getElementById('select-dep').value;
+            let selectLugar = document.getElementById('selectLugar');
+            selectLugar.innerHTML = '';
+            const ajax = new XMLHttpRequest();
+            ajax.open('GET', `selectLugares.php?idLugar=${selectId}`, true);
+            ajax.onload=function(){
+                if(this.status ==200){
+                     var datos = JSON.parse(this.responseText);
+                     datos.forEach(function(dato){
+                         const option = document.createElement('option');
+                         option.innerHTML = dato.nombre;
+                         selectLugar.appendChild(option);
+                     })
+                }
+            }
+            ajax.send();
+        }
+        
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
