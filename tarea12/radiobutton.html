@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/e4996e7325.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+
+    <title>12 javascript CSS DOM</title>
+</head>
+
+<body>
+    <section>
+        <div class="container my-5 py-5">
+            <div class="row">
+                <div class="col-12 col-md-5 ">
+                    <div class="container">
+                        <h2>Considera que debemos dar examen parcial en linea?</h2>
+                        <ul>
+                            <li>
+                                <input type="radio" id="si" name="pregunta" class="custom-control-input" id="si"
+                                    onchange="Seleccion()">
+                                <label class="custom-control-label" for="si">SI</label>
+                                <div class="check"></div>
+                            </li>
+                            <li>
+                                <input type="radio" id="no" name="pregunta" class="custom-control-input" id="no"
+                                    onchange="Seleccion()">
+                                <label class="custom-control-label" for="no">NO</label>
+                                <div class="check"></div>
+                            </li>
+                            <li>
+                                <input type="radio" id="nose" name="pregunta" class="custom-control-input" id="nose"
+                                    onchange="Seleccion()">
+                                <label class="custom-control-label" for="nose">NS/NC</label>
+                                <div class="check"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div id="resultado" class="contenedor">
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <ul class="list-group list-group-flush mt-5 pt-4">
+                        <li type="button" class="list-group-item text-success" id="verde" onclick="cambiarVerde()">verde</li>
+                        <li type="button" class="list-group-item text-danger" id="rojo" onclick="cambiarRojo()">rojo</li>
+                        <li type="button" class="list-group-item text-primary" id="azul" onclick="cambiarAzul()">azul</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
