@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/e4996e7325.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+        <div class="row m-0 p-0">
+            <div class="col-md-12 bg-dark mi-bg">
+                <nav class="navbar navbar-light bg-dark mi-bg">
+                    <a class="navbar-brand" href="#">
+                        <img src="imagenes/logousfx.png" width="60" height="60" alt="" loading="lazy">
+                    </a>
+                    <h1 class="text-center text-white">USFX</h1>
+                </nav>
+            </div>
+            <div class="col-md-12 bg-primary mi-bg2 py-2">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link  text-white" href="#">inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Academico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Postgrado</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 list-group bg-secondary Gradient1 p-0">
+                <ul class="nav flex-column text-center">
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link  text-white " href="javascript:cargar('tegnologia.html')">Tecnologia</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="javascript:cargar('medicina.html')">Medicina</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="javascript:cargar('tecnica.html')">Tecnica</a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="col-md-7 bg-light mi-h">
+                <div id="contenido" class="mt-5">
+                </div>
+            </div>
+            <div class="col-md-3 bg-warning Gradient1">
+                <p class="small text-white text-center mt-5">Campus Universitario USFX</p>
+                <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.463000512342!2d-65.24893828527082!3d-19.0433703871067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf2db540b38d%3A0x192bbb382b30f818!2sCampus%20Universitario%20USFX!5e0!3m2!1ses-419!2sbo!4v1591548227430!5m2!1ses-419!2sbo" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <p class="small text-white text-center mt-5">USFX central</p>
+                <img src="imagenes/usfx.jpg" alt="" srcset="" class="img-fluid">
+            </div>
+        </div>
+    
+
+    <div id="modalAjax">
+
+    </div>
+
+    <script>
+        function cargar(pagina) {
+            var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            ajax.open("get", pagina, true); //a quien llamara
+            ajax.onreadystatechange = function () { // funcion de respuesta
+                if (ajax.readyState == 4) {
+                    document.getElementById("contenido").innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+            ajax.send(); //llamar a la pagina
+        }
+
+        function cargarModal() {
+            let url = '';
+            let radio = document.querySelector('input[name="exampleRadios"]:checked').value;
+            if (radio == 1) {
+                url = 'sistemas.html';
+            } else {
+                url = 'ciencias.html';
+            }
+            var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+            ajax.open("get", url, true); //a quien llamara
+            ajax.onreadystatechange = function () { // funcion de respuesta
+                if (ajax.readyState == 4) {
+                    document.getElementById("modalAjax").innerHTML = this.responseText
+                    $('#modal').modal()
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+            ajax.send(); //llamar a la pagina
+
+        }
+
+    </script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+</html>
+<style>
+    .mi-h{
+        height: 100vh   ;
+    }
+    .Gradient1
+{
+ background-image: linear-gradient(to bottom, #133f80, #365b98, #5479af, #7397c7, #94b6de, #9bc7ea, #a5d8f5, #b1e9ff, #a7f0fc, #a4f6f3, #aafae5, #b9fdd5);
+}
+.mi-bg{
+    background: #133F80 !important;
+}
+.mi-bg2{
+    background: #22054F !important;
+}
+.btn-secondary {
+    color: #fff !important;
+    background-color: rgba(0,123,255,.5) !important;
+    border-color: #22054f54 !important;
+    margin: 0.18em;
+    }
+.input-group-text{
+    color: rgba(0, 123, 255, 0.46) !important;
+}
+
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 1px solid white;
+    width: 150px;
+}
+.list-group{
+    border-radius: 0%;
+}
+.nav-link.active{
+    background-image: linear-gradient(to right bottom, #9e66c6, #6027e1);
+    border-color: white;
+}
+.nav-link:focus,.nav-link-action:hover{
+        color: white;
+    text-decoration: none;
+    background-image: linear-gradient(to right bottom, #9e66c6, #6027e1);
+    }
+.modal-header{
+    border-bottom: none !important;
+}
+</style>
