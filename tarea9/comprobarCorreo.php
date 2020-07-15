@@ -1,6 +1,7 @@
 <?php 
 if (!isset($_SESSION['correo']))
 {
-	 header("Location: mensaje.html"); 
+	header("location: login.php");
+	echo'usuario no identificado'; 
 	} 
 ?>

@@ -25,7 +25,7 @@ include('comprobarUsuario.php');
 
       <header class="main-header">
 
-        <a href="index2.html" class="logo">
+        <a href="header.html" class="logo">
           <span class="logo-mini"><b></b>hotel</span>
           <span class="logo-lg"><b>HoteL</b></span>
         </a>
@@ -52,8 +52,7 @@ include('comprobarUsuario.php');
                     </div>
                   </li>
                 </ul>
-              </li>
-              
+              </li>   
             </ul>
           </div>
         </nav>
@@ -69,20 +68,20 @@ include('comprobarUsuario.php');
                 <i class="fas fa-sort-down pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="habitaciones.php"><i class="fa fa-circle-o"></i> Agregar Habitacion</a></li>
-                <li><a href="tipoHabit.php"><i class="fa fa-circle-o"></i> Agregar Tipo de Habitacion</a></li>
-                <li><a href="listarHabit.php"><i class="fa fa-circle-o"></i> Listar</a></li>
+                <li><a href="habitaciones.php"><i class="fas fa-plus-circle"></i> Agregar Habitacion</a></li>
+                <li><a href="tipoHabit.php"><i class="fas fa-plus-circle"></i> Agregar Tipo de Habitacion</a></li>
+                <li><a href="listarHabit.php"><i class="far fa-list-alt"></i> Listar</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+              <i class="fas fa-user-plus"></i>
                 <span>Usuarios</span>
                 <i class="fas fa-sort-down pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="admUsuarios.php"><i class="fa fa-circle-o"></i>Agregar</a></li>
-                <li><a href="listarUsuario.php"><i class="fa fa-circle-o"></i> listar</a></li>
+                <li><a href="admUsuarios.php"><i class="fas fa-plus-circle"></i>Agregar</a></li>
+                <li><a href="listarUsuario.php"><i class="far fa-list-alt"></i> Listar</a></li>
               </ul>
             </li>
           </ul>

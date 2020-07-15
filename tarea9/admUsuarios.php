@@ -6,13 +6,13 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header with-border">
-            <h1 class="box-title">Usuarios</h1>
+            <h1 class="box-title">Agregar Usuario</h1>
             <div class="box-tools pull-right">
             </div>
           </div>
           <section class="container">
-            <div class="container row">
-              <div class="col-sm-6">
+            <div class="container row mi-padding">
+              <div class="offset col-sm-7">
 
                 <form action="agregarUsuario.php" name="" method="POST" >
                   <div class="form-group">

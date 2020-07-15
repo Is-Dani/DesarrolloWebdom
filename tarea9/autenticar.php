@@ -5,7 +5,7 @@
     $sql="select * from usuarios where correo='$correo' and password='$password'";
     $resultado=$con->query($sql);
     if ($fila=$resultado->fetch_assoc()){
- 	   echo "Es  usuario correcto";
+ 	   echo "usuario correcto";
       $_SESSION['correo']=$correo;
       $_SESSION['rol']=$fila['idrol'];
       $_SESSION['descripcion']=$fila['descripcion'];

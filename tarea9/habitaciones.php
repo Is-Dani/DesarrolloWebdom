@@ -1,5 +1,5 @@
-<?php 
-require_once('header.php'); 
+<?php
+require_once('header.php');
 ?>
 <div class="content-wrapper">
     <section class="content">
@@ -14,8 +14,8 @@ require_once('header.php');
 
 
                     <div class="container-fluid">
-                        <div class="row justify-content-between">
-                            <div class="col-sm-8 col-12">
+                        <div class="row justify-content-between mi-padding">
+                            <div class="offset col-12 col-sm-7">
                                 <div class="top">
                                     <h3>Agregar Habitacion</h3>
                                     <section class="bg text-white">
@@ -28,7 +28,9 @@ require_once('header.php');
                                                 <label> Tipo de habitación *</label>
                                                 <select name="tipohabitacion" class="form-control">
                                                     <?php
-                                                    include("motipohabitacion.php");
+                                                    include("conexion.php");
+                                                    $sql = "SELECT * FROM tipohabitaciones";
+                                                    $resultado = $con->query($sql);
                                                     while ($fila = $resultado->fetch_assoc()) {
                                                         echo '<option value="' . $fila['id'] . '"> ' . $fila['descripcion'] . '</option>';
                                                     }
@@ -72,10 +74,6 @@ require_once('header.php');
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>

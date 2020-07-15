@@ -13,14 +13,13 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header with-border">
-            <h1 class="box-title">Usuarios</h1>
+            <h1 class="box-title">Editar Usuario</h1>
             <div class="box-tools pull-right">
             </div>
           </div>
           <section class="container">
-            <div class="container row">
-              <div class="col-sm-6">
-
+          <div class="row justify-content-between mi-padding">
+                            <div class="offset col-12 col-sm-6">
                 <form action="editarUsuario.php" name="" method="POST" >
                 <input type="hidden" value="<?php echo $id; ?>" name="id">
                   <div class="form-group">
@@ -53,7 +52,7 @@
                       ?>
                     </select>
                   </div>
-                  <button type="submit" class="btn btn-primary">Enviar</button>
+                  <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </form>
 
               </div>

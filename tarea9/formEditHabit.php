@@ -6,8 +6,6 @@ $id = $_GET['opcion'];
 $sql = "SELECT * from habitacion where id='$id'";
 $resultado = $con->query($sql);
 $fila = $resultado->fetch_assoc();
-
-
 ?>
 
 <div class="content-wrapper">
@@ -20,9 +18,9 @@ $fila = $resultado->fetch_assoc();
                         <div class="box-tools pull-right">
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5">
+                    <div class="container-fluid">
+                    <div class="row justify-content-between mi-padding">
+                            <div class="offset col-12 col-sm-7"> 
                                 <div class="top">
                                     <h2>EDITAR HABITACION</h2>
                                     <section>
