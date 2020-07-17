@@ -34,8 +34,9 @@ $fila = $resultado->fetch_assoc();
                                                 <label> Tipo de habitación *</label>
                                                 <select name="tipohabitacion" class="form-control">
                                                     <?php
-                                                    include("motipohabitacion.php");
-                                                    while ($fila1 = $resultado->fetch_assoc()) {
+                                                    $sql1 = "SELECT * from tipohabitaciones";
+                                                        $resultado1 = $con->query($sql1);
+                                                    while ($fila1 = $resultado1->fetch_assoc()) {
                                                         echo '<option value="' . $fila1['id'] . '"> ' . $fila1['descripcion'] . '</option>';
                                                     }
                                                     ?>

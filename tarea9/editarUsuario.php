@@ -1,10 +1,11 @@
 <?php include("conexion.php");
+$id = $_POST['id'];
 $correo = $_POST['correo'];
 $password = $_POST['password'];
 $nombres = $_POST['nombres'];
 $apellidos = $_POST['apellidos'];
 $idrol = $_POST['idrol'];
-$sql = "UPDATE usuarios set correo='$correo',password='$password',nombres=$nombres,apellidos='$apellidos',idrol='$idrol' where id='$id' ";
+$sql = "UPDATE usuarios set correo='$correo',password='$password',nombres='$nombres',apellidos='$apellidos',idrol='$idrol' where id='$id' ";
 
 $resultado=$con->query($sql);
 if ($resultado)
