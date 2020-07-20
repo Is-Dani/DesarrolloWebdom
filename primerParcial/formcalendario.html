@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <div class="cuadro">
+        <form action="calendario.php" method="post">
+            <label for="mes">Mes</label>
+            <select name="mes" id="mes">
+                <option value="1"selected>Enero</option> 
+                <option value="2" >Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+              <label for="anio" >Año</label>
+              <input type="number" name="anio" class="btn-anio" id="anio"><br><br>
+              <input class="btn" type="submit" value="enviar">
+        </form>
+    </div>
+   
+</body>
+</html>
+<style>
+    label{
+        color: #70AD47
+    }
+    .cuadro{
+        border: solid #70AD47 1px;
+        width: 500px;
+        height: 400px;
+        margin-bottom: 100px;
+    }
+    .btn{
+        position: relative;
+        left: 80px;
+        background:  #70AD47 1px;
+        border: 0ch;
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+    }
+    select{
+        border: solid #70AD47 1px;
+        color: #70AD47 1px;
+        font-size: medium;
+        padding: 10px;
+        margin-left: 20px;
+    }
+    .btn-anio{
+        border: solid #70AD47 1px;
+        color: #70AD47 1px;
+        font-size: medium;
+        padding: 10px;
+        margin-left: 20px;
+    }
+</style>
