@@ -1,4 +1,5 @@
 <?php
+
     $mes=$_POST['mes'];
     $anio=$_POST['anio'];
     echo '<div class="centro"><strong >Año: '.$anio.'</strong><br>';
@@ -22,13 +23,18 @@
     </tr>
     <tr>';
     
-    
+    for ($j=0; $j <$dia1 ; $j++) { 
+        echo'<td></td>';
+        
+    } 
+    $mod = $dia1-1;
     for ($i=1; $i <= $numdias; $i++) { 
             echo '<td>'.$i.'</td>';
-            if($i%7==0){
+            if($i%$mod==0 ){
                 echo '<tr><tr>';
+                $mod=$mod+7;
             }
-        
+
     }
  
 echo'</tr></table>';
