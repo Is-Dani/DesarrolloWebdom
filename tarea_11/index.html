@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Ahorcado!</title>
+</head>
+
+<body>
+    <div class="container mt-5" id="contenedor">
+        
+        <div class="row">
+            <div class="text-center col-sm-12 offset-md-3 col-md-6 bg">
+                <h1 class="color py-5">AHORCADO</h1>
+                <div class="caja" id="caja">
+                    <div class="muneco">
+                        
+                        <svg width="300" height="400">
+                            <line x1="0" y1="0" x2="270" y2="0" stroke="white" stroke-width="10"></line> 
+                            <line x1="20" y1="0" x2="20" y2="250" stroke="white" stroke-width="4"></line> 
+                            <line x1="50" y1="0" x2="20" y2="30" stroke="white" stroke-width="4"></line>  
+                            <line x1="150" y1="0" x2="150" y2="50" stroke="white" stroke-width="4"></line> 
+
+                            <line x1="150" y1="105" x2="125" y2="105" stroke="white" stroke-width="4"></line>
+                            <line x1="126" y1="105" x2="110" y2="90" stroke="white" stroke-width="4"></line>
+                            <line x1="174" y1="105" x2="190" y2="90" stroke="white" stroke-width="4"></line>
+                                
+                            <line x1="150" y1="105" x2="175" y2="105" stroke="white" stroke-width="4"></line>    
+                            <circle cx="150" cy="70" r="20" fill="none" stroke="white" stroke-width="4"></circle>
+                            <line x1="150" y1="90" x2="150" y2="170" stroke="white" stroke-width="4"></line>
+                            <line x1="150" y1="169" x2="120" y2="205" stroke="white" stroke-width="4"></line>
+                            <line x1="150" y1="169" x2="180" y2="205" stroke="white" stroke-width="4"></line>    
+
+                        </svg>
+                        <img src="" alt="" id="muneco" class="img-muneco">
+                    </div>
+                    <button class="btn btn-primary" onclick="iniciarJuego()" id="btnIniciar">Iniciar Juego</button>
+                </div>
+                <div id="divVerificar" class="verificar">
+                    <input type="text" id="InputVerificar">
+                    <button class="btn btn-outline-primary" onclick="verificar();">Verificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html

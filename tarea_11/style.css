@@ -1,0 +1,24 @@
+.verificar{
+    display: none;
+}
+.tamano{
+    width: 30px;
+    margin: 10px;
+    border-color:#ffcc81;
+}
+.caja{
+    height: 470px ;
+    background-size: cover;
+}
+.img-muneco{
+    height: 200px;
+}
+.color{
+    color: #ff61d8;
+}
+.bg{
+    background: #1a1e2d !important;
+}
+.btn-outline-primary{
+    border-color: #569cfa !important;
+}
