@@ -1,0 +1,11 @@
+.cuadrado{
+    text-align: center;
+    border: solid black 1px;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+}
+#correo-au, #password-au, #ingresar, #nombre, #apellido, #correo-reg, #password-reg, #registrar{
+    padding: 5px;
+    margin: 14px;
+}
