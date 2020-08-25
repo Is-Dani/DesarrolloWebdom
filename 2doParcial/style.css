@@ -47,3 +47,12 @@ img{
     width: 30px;
     height: 30px;
 }
+.bg{
+    background: whitesmoke;
+    width: 337px;
+    padding: 14px;
+    margin: 15px;
+}
+.mg{
+    margin: 25px;
+}
