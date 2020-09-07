@@ -1,0 +1,81 @@
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h1 class="box-title">HABITACIONES</h1>
+                        <div class="box-tools pull-right">
+                        </div>
+                    </div>
+
+
+                    <div class="container-fluid">
+                        <div class="row justify-content-between mi-padding">
+                            <div class="offset col-12 col-sm-7">
+                                <div class="top">
+                                    <h3>Agregar Habitacion</h3>
+                                    <section class="bg text-white">
+                                        <form action="" name="" method="">
+                                            <div class="form-group">
+                                                <label>Numero de Habitacion</label>
+                                                <input type="text" name="nro" id="nro" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Tipo de habitación *</label>
+                                                <select name="tipohabitacion" id="tipohabitacion" class="form-control">
+                                                    <?php
+                                                    include("conexion.php");
+                                                    $sql = "SELECT * FROM tipohabitaciones";
+                                                    $resultado = $con->query($sql);
+                                                    while ($fila = $resultado->fetch_assoc()) {
+                                                        echo '<option value="' . $fila['id'] . '"> ' . $fila['descripcion'] . '</option>';
+                                                    }
+                                                    ?>
+                                                </select>
+
+                                            </div>
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <label class="col-form-label col-sm-4 pt-0">Baño Privado</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="banoprivado" id="banoprivado1" value="1" checked>
+                                                            <label class="form-check-label" for="gridRadios1">
+                                                                Si
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="banoprivado" id="banoprivado2" value="2">
+                                                            <label class="form-check-label" for="gridRadios2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="form-group">
+                                                <label>Espacio</label>
+                                                <input type="number" step="any" class="form-control" name="espacio" id="espacio">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Precio</label>
+                                                <input type="number" step="any" class="form-control" name="precio" id="precio">
+                                            </div>
+                                            <div class="mt-2">
+                                                <input type="button" name="" value="Agregar" onclick="llamarregistrarHabit('agregarHabit.php')" class="btn btn-primary form-control">
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
