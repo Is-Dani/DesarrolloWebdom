@@ -1,6 +1,6 @@
 <?php include("conexion.php");
 $correo = $_POST['correo'];
-$password = $_POST['password'];
+$password = sha1( $_POST['password']);
 $nombres = $_POST['nombre'];
 $apellidos = $_POST['apellido'];
 $rol = $_POST['rol'];
