@@ -15,13 +15,21 @@ session_start();
         <div class="cabecera">
             <div class="texto">
                 <h5>BIENVENIDOS A HOTEL TARABUCO</h5>
-                <p>Usuario: <?php echo $_SESSION['usuario'] ?></p>
+                <p>Usuario: <?php if(isset($_SESSION['usuario'])){
+                    echo $_SESSION['usuario'];
+                }else{
+                    echo'no identificado';
+                } ?></p>
                 <p>Nivel:<?php
+                        if(isset($_SESSION['nivel'])){
                             if ($_SESSION['nivel'] == 0) {
                                 echo 'Usuario';
                             } else {
                                 echo 'Administrador';
                             }
+                        }else{
+                            echo 'sin nivel';
+                        }
                             ?> </p>
             </div>
         </div>
@@ -30,12 +38,15 @@ session_start();
                 <li><a href="#" onclick="cargar('presentacion.html')">Presentacion</a></li>
                 <li><a href="#" onclick="cargar('habitaciones.php')">Habitaciones</a></li>
                 
-                <?php if ($_SESSION['nivel'] > 0) {
+                <?php 
+                    if(isset($_SESSION['nivel'])){
+                if ($_SESSION['nivel']> 0) {
                 ?>
 
                     <a href="#" onclick="cargar('reservas.php')">Reservas</a>
                 
-                <?php } ?>
+                <?php }
+            }else{echo'';} ?>
 
                 <li><a href="#" onclick="cargar('cambiarColor.html')">Cambiar Color</a></li>
                 <li><a href="#"  onclick="cargarRegLog('login.php')">Cambiar Usuario</a></li>

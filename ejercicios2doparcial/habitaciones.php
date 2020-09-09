@@ -23,6 +23,7 @@
                     <td>'; echo $fila['banoprivado']==1? 'si':'no' ; echo'</td>
                     <td>'.$fila['espacio'].'</td>
                     <td>'.$fila['precio'].'</td>';
+                    if(isset($_SESSION['nivel'])){
                 if($_SESSION['nivel'] == 0){
                     echo'
                         <td><a href="javascript:Confirmado('.$fila["id"].')" class="txt-rojo" >Reservar</a></td>';
@@ -31,13 +32,13 @@
                     echo'
                         <td><a href="javascript:editar('.$fila["id"].')" class="txt-verde" >Editar</a></td>
                         <td><a href="javascript:eliminar('.$fila["id"].')" class="txt-rojo" >Eliminar</a></td>';
-                }
+                }}
             echo '</tr>';
             }?>
         </table>
         
         <?php
-        if($_SESSION['nivel'] != 0){
+        if(isset($_SESSION['nivel']) != 0){
         ?>
         
         <div class='pd'>
