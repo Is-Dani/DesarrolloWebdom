@@ -1,20 +1,17 @@
-<?php include("conexion.php");
+<?php
     session_start();
-    $usuario = $_POST['usuario'];
+    include 'conexion.php';
+    $correo = $_POST['correo'];
     $password = sha1($_POST['password']);
-    $sql ="SELECT * FROM usuarios WHERE correo = '$usuario' and password ='$password'";
-    
-    $resultado=$con->query($sql);
-    
-    if ($fila=$resultado->fetch_assoc()){
-        // echo $fila['nombres'];
-        echo "Es  usuario correcto";
-        $_SESSION['nombre']= $fila['nombres'];
-        $_SESSION['apellido']= $fila['apellidos'];
+    $sql = "SELECT * from usuarios where correo='$correo' and password ='$password'";
+    $resultado = $con->query($sql);
+    if($fila = $resultado->fetch_assoc()){
+        $_SESSION['nombres']=$fila['nombres'];
+        $_SESSION['apellidos']=$fila['apellidos'];
         $_SESSION['nivel']=$fila['nivel'];
-
         header("Location: inicio.php");
-       }
-       else{
-          echo 'Datos de Autenticación Equivocados';}
+    }else{
+        echo'Datos de autenticacion equivocados';
+    }
+
 ?>

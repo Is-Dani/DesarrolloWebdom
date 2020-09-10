@@ -1,40 +1,18 @@
-<!doctype html>
+<!--1.	Crear el formulario login.html que solicita el usuario y la contraseña e invoca a autenticar.php que realiza la autenticación y que redirección a la página index.php, si el usuario coloca los datos incorrectos el sistema les muestra el mensaje “Datos de Autenticación Equivocados”, el mensaje debe ser de color Rojo y debe estar centrado-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 </head>
-
 <body>
-  <div class="container mt-5 pt-5">
-    <div class="row">
-      <div class="col-6">
-        <form action="autenticar.php" method="POST">
-          <div class="form-group" >
-            <label for="usuario">usuario</label>
-            <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" name="usuario">
-          </div>
-          <div class="form-group">
-            <label for="password">contraseña</label>
-            <input type="password" class="form-control" id="password" name="password">
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+    <form action="autenticar.php" method="POST">
+        <label for="correo"> Correo </label><br>
+        <input type="text" name="correo" id="correo"><br>
+        <label for="passwrd"> Password </label><br>
+        <input type="text" name="password" id="password"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
-
 </html>

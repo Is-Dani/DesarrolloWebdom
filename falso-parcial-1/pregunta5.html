@@ -1,16 +1,18 @@
+<!--
+5.	Crear la página pregunta5.html que utilizando formularios solicite un número llame por POST a la página llenar.php que permite generar n cuadros del sumando y n cuadros retando y muestra el texto para introducir valores, además dispone el botón calcular que llama a la página restas.php que calcula la resta del sumando y el restando. Debe utilizar Cookies para persistir el valor de n. Ej
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>pregunta 5</title>
 </head>
 <body>
-    <form action="llenar.php" class="form" method="POST">
-        <input type="text" name="n" placeholder="Introducir n" style="width: 50px; height: 50px;">
-
-        <input type="submit">
-
+    <form action="llenar.php" method="POST">
+        <label for="num">ingrese el un numero</label><br>
+        <input type="number" name="num" id="num"><br><br>
+        <input type="submit" value="enviar">
     </form>
 </body>
 </html>
