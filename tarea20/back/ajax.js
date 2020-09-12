@@ -276,3 +276,33 @@ function usuarioReserva(nro) {
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
     ajax.send(parametros); 
 }
+
+
+
+function reservaConfirmar(id, estado){
+    var ajax = new XMLHttpRequest()
+    var parametros = "id=" + encodeURI(id) + "&estado=" + encodeURI(estado)+ "&Nocache=" + Math.random();
+    console.log(parametros)
+    ajax.open("post", "confirmarReserva.php", true); 
+    ajax.onreadystatechange = function() { 
+        if (ajax.readyState == 4) {
+            cargar('listarReservas.php')
+            //  document.getElementById("contenido").innerHTML = ajax.responseText;  
+        }
+    }
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+    ajax.send(parametros); 
+}
+function eliminarReserva(id){
+    var ajax = new XMLHttpRequest() 
+    var parametros = "id=" + id + "&Nocache=" + Math.random();
+    ajax.open("post", "eliminarReserva.php", true);
+    ajax.onreadystatechange = function() { 
+        if (ajax.readyState == 4) {
+            //document.getElementById("contenido").innerHTML = ajax.responseText;
+            cargar('listarReservas.php')
+        }
+    }
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+    ajax.send(parametros);
+}

@@ -2,6 +2,9 @@
 include 'conexion.php';
 $sql = "SELECT * from reservas";
 $respuesta = $con->query($sql);
+header('Content-type: application/vnd.ms-excel;charset=iso-8859-15');
+header('Content-Disposition: attachment; filename=listarReservas.xls');
+
 ?>
 <div class="content-wrapper">
     <section class="content">
@@ -48,13 +51,14 @@ $respuesta = $con->query($sql);
                                                     <td>';
                                             ?> 
                                             <?php if($fila['confirmado'] == 'SI') { ?>
-                                                <button type="button" class="badge badge-success" name="estado" id="" onclick="editarEstado(<?php echo $fila['id'] ;?> , <?php echo $fila['confirmado'] ?>)" value="1">Si</button>
-                                            <?php }else{?>
-                                                <button type="button" class="badge badge-danger" name="estado" id="" onclick="editarEstado( <?php echo $fila['id'] ;?> , <?php echo $fila['confirmado'] ?>)" value="0">NO</button>
+                                                <button type="button" class="badge badge-success" name="estado" id="" onclick="resevaConfirmar(<?php echo $fila['id'] ;?> , <?php echo $fila['confirmado']; ?>)" value="SI">Si</button>
+                                            <?php }else {
+                                             if($fila['confirmado'] == 'NO'){?>
+                                                <button type="button" class="badge badge-danger" name="estado" id="" onclick="reservaConfirmar( <?php echo $fila['id'] ;?> , <?php echo $fila['confirmado']; ?>)" value="NO">NO</button>
                                                 <?php
-                                            }
+                                            }}
                                                 echo ' </td>
-                                                <td><a href="javascript:eliminarTipoHabit('.$fila["id"].')"><i class="fas fa-trash-alt text-danger"></i></a></td></tr>';
+                                                <td><a href="javascript:eliminarReserva('.$fila["id"].')"><i class="fas fa-trash-alt text-danger"></i></a></td></tr>';
                                             }
                                             ?>
                                         </tbody>

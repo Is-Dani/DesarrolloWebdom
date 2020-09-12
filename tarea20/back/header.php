@@ -101,7 +101,7 @@ include('comprobarUsuario.php');
               <i class="fas fa-sort-down pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li><a href="javascript:cargar('#')"><i class="fas fa-plus-circle"></i>Editar Reserva</a></li>
+              <li><a href="listarReservas.php"><i class="far fa-list-alt"></i>Reportes excel</a></li>
               <li><a href="javascript:cargar('listarReservas.php')"><i class="far fa-list-alt"></i> Lista de Reservas</a></li>
             </ul>
           </li>
