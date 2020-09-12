@@ -31,7 +31,6 @@ header('Content-Disposition: attachment; filename=listarReservas.xls');
                                                 <th scope="col">Pagada</th>
                                                 <th scope="col">Nombre y Apellido</th>
                                                 <th scope="col">Correo</th>
-                                                <th scope="col"> Confirmar</th>
                                                 <th scope="col"> Eliminar</th>
 
                                             </tr>
@@ -50,13 +49,8 @@ header('Content-Disposition: attachment; filename=listarReservas.xls');
                                                     <td>' . $fila['correoelectronico'] . '</td> 
                                                     <td>';
                                             ?> 
-                                            <?php if($fila['confirmado'] == 'SI') { ?>
-                                                <button type="button" class="badge badge-success" name="estado" id="" onclick="resevaConfirmar(<?php echo $fila['id'] ;?> , <?php echo $fila['confirmado']; ?>)" value="SI">Si</button>
-                                            <?php }else {
-                                             if($fila['confirmado'] == 'NO'){?>
-                                                <button type="button" class="badge badge-danger" name="estado" id="" onclick="reservaConfirmar( <?php echo $fila['id'] ;?> , <?php echo $fila['confirmado']; ?>)" value="NO">NO</button>
                                                 <?php
-                                            }}
+                                        
                                                 echo ' </td>
                                                 <td><a href="javascript:eliminarReserva('.$fila["id"].')"><i class="fas fa-trash-alt text-danger"></i></a></td></tr>';
                                             }
