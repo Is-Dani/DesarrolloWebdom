@@ -1,0 +1,18 @@
+  .badge-success{
+    background: #32CD32 !important;
+  }
+  .badge-danger{
+      background: #FF6347 !important;
+  }
+  .table-striped>tbody>tr:nth-of-type(odd){
+      background-color: #b7bedd50;
+  }
+  @media (min-width: 992px){
+    .offset{
+    position: relative;
+    left: 20%;
+    }
+  }
+  .mi-padding{
+    padding-bottom: 100px;
+  }
