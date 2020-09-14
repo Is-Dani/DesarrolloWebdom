@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Fina sis256</title>
+</head>
+
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6">
+            <p class="text-secondary" >ingresar correo y contraseña</p>
+            <form action="autenticar.php" method="POST">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" id="btnGroupAddon"><i class="fas fa-at"></i></div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Input group example" aria-describedby="btnGroupAddon" id="correo" name="correo" placeholder="correo" onchange="autocompletar()">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" id="btn2"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <input type="password" class="form-control" aria-label="Input group example" aria-describedby="btn2" id="password" name="password" readonly placeholder="contraseña">
+                </div>
+                <input type="submit" class="btn btn-outline-primary" value="ingresar">
+            </form>
+        </div>
+        <div class="col-6">
+            <p class="text-secondary">teclado virtual para la contraseña</p>
+            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <div class="row d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(1)">1</button>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(2)">2</button>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(3)">3</button>
+                        <div class="w-100"></div>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(4)">4</button>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(5)">5</button>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(6)">6</button>
+                        <div class="w-100"></div>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(7)">7</button>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(8)">8</button>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(9)">9</button>
+                        <div class="w-100"></div>
+                        <button type="button" class="btn btn-secondary" onclick="concatenar(0)">0</button>
+                        <button type="button" class="btn btn-secondary" onclick="limpiar()">limpiar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="ajax.js"></script>
+</body>
+
+</html>
