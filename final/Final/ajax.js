@@ -82,22 +82,6 @@ function limpiar(){
    document.getElementById('password').value = '';
 }
 
-function cargarCalendario(){
-    mes = document.getElementById('mes').value;
-    anio = document.getElementById('anio').value;
-    var ajax = new XMLHttpRequest() 
-    var parametros = "mes=" + mes +"&anio=" + anio + "&Nocache=" + Math.random();
-    ajax.open("get", 'calendario.php', true); 
-    ajax.onreadystatechange = function() { 
-        if (ajax.readyState == 4) {
-            //  document.getElementById("resultado").innerHTML = ajax.responseText;
-            cargar2('listarnoticia.php');
-        }
-    }
-    ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); 
-    ajax.send(parametros); 
-}
-
 
 
     
