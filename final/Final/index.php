@@ -25,7 +25,7 @@
             <div class="text-danger">
               <h6><span  style="font-size:x-large;">U</span>NIVERSIDAD DE <span  style="font-size:x-large;">S</span>AN <span  style="font-size:x-large;">F</span>RANCISCO <span  style="font-size:x-large;">X</span>AVIER</h6>
             </div>
-            <div class="text-white">
+            <div style="color: blue;">
               <p><span  style="font-size:x-large;">F</span>ACULTAD DE <span  style="font-size:x-large;">T</span>ECNOLOGIA</p>
             </div>
           </div>
@@ -57,7 +57,7 @@
       <div class="col-2 bg-secondary py-2 border"><a class="text-dark text-decoration-none" href="javascript:cargar2('listarnoticia.php')">Pregunta4</a> </div>
       <div class="col-2 bg-secondary py-2 border"><a class="text-dark text-decoration-none" href="javascript:cargar('seleccionar.html')">Pregunta5</a> </div>
     </div>
-    <div class="row" >
+    <div class="row" style="min-height: 300px;" >
       <div class="col-3 border" id="contenido">
 
       </div>

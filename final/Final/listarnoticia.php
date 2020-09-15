@@ -1,12 +1,9 @@
 <?php
 include 'conexion.php';
 $sql = "SELECT noticias.id, imagen, titulo, texto,fecha from noticias ";
-
-
-  
 $resultado = $con->query($sql);
 ?>
-<div class="container">
+<div class="container my-5">
 <table class="table">
   <thead class="thead-dark">
     <tr>

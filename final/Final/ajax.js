@@ -72,7 +72,7 @@ function RegistrarComentario(){
 }
 
 function autocompletar(){
-    document.getElementById('correo').value = 'usuario@gmail.com';
+    document.getElementById('correo').value += 'usuario@gmail.com';
 }
 
 function concatenar(n){
